@@ -10,6 +10,6 @@
         </style>
     </head>
     <body>
-        <p><a href="https://www.w3schools.com" target="iframe_a">Visit W3Schools</a></p>
+        <iframe src="https://www.w3shools.com"></iframe>
     </body>
 </html>
