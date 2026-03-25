@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Headings Design</title>
+<style>
+  body {
+    background-color: #eee;
+    font-family: "Times New Roman", serif;
+  }
+
+  .container {
+    width: 650px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f5f5f5;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  /* Heading 1 */
+  .h1 {
+    font-size: 48px;
+    font-weight: bold;
+    border-top: 5px solid black;
+    text-shadow: 2px 2px 0 red;
+    margin-bottom: 20px;
+  }
+  .h2 {
+    font-size: 32px;
+    font-style: italic;
+    border: 3px solid yellow;   /* 黃色框 */
+    padding: 10px;
+    box-shadow: 0px 5px 0px black; /* 黑色陰影在下方 */
+    margin-bottom: 40px;
+  }
+
+  /* Heading 3 */
+  .h3 {
+    font-size: 24px;
+    text-align: right;
+    text-decoration: underline;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="h1">This is heading 1</div>
+  <div class="h2">This is heading 2</div>
+  <div class="h3">This is heading 3</div>
+</div>
+
+</body>
+</html>
