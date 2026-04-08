@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exercise</title>
+
+<style>
+body {
+    background-color: #e6e6e6;
+    font-family: "Times New Roman", serif;
+}
+
+/* 外框 */
+.container {
+    width: 800px;
+    margin: 40px auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-shadow: 0 0 5px #aaa;
+    position: relative;
+}
+
+/* 文字區 */
+.text {
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* inline-block 標記 Love */
+.highlight {
+    display: inline-block;
+    background-color: yellow;
+    padding: 2px 6px;
+    border:1px solid black;
+}
+
+/* 右側浮動區塊 */
+.float-box {
+    float: right;
+    width: 150px;
+    height: 120px;
+    border: 3px solid green;
+    padding: 10px;
+    margin-left: 15px;
+
+    overflow: auto;
+    background-color: white;
+}
+
+/* 清除 float */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container clearfix">
+
+    <div class="float-box">
+        A float div with overflow auto.
+         A float div with overflow auto.
+          A float div with overflow auto.
+           A float div with overflow auto.
+            A float div with overflow auto.
+             A float div with overflow auto.
+      
+    </div>
+
+    <div class="text">
+        (Just long sentence.) Let me not to the marriage of true minds Admit impediments.
+        <span class="highlight">Love</span> is not love Which alters when it alteration finds,
+        Or bends with the remover to remove: O, no! it is an ever-fix`ed mark,
+        That looks on tempests and is never shaken; It is the star to every wand'ring bark,
+        Whose worth's unknown, although his height be taken.
+        <span class="highlight">Love</span>'s not Time's fool, though rosy lips and cheeks
+        Within his bending sickle's compass come;
+        <span class="highlight">Love</span> alters not with his brief hours and weeks,
+        But bears it out even to the edge of doom:
+        If this be error and upon me proved, I never writ, nor no man ever loved.
+    </div>
+
+</div>
+
+</body>
+</html>
