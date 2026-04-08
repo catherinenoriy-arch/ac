@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exercise</title>
+
+<style>
+body {
+    background-color: #e6e6e6;
+    font-family: Arial;
+}
+
+/* 外框 */
+.container {
+    width: 700px;
+    margin: 50px auto;
+    background-color: #f2f2f2;
+    padding: 30px;
+    box-shadow: 0 0 5px #aaa;
+}
+
+/* 表格 */
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid #555;
+    width: 100px;
+    height: 40px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* 標題列 */
+th {
+    background-color: #888;
+    color: white;
+}
+
+/* 不同背景色 */
+.row1 {
+    background-color: yellow;
+}
+
+.row2 {
+    background-color: #ddd;
+}
+
+.row3 {
+    background-color: yellow;
+}
+
+/* 固定右上角 div */
+.fixed-box {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    border: 3px solid green;
+    padding: 10px;
+    background-color: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr class="row1">
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr class="row2">
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr class="row3">
+            <td>3</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="fixed-box">
+    This div<br>
+    element has<br>
+    position: fixed;
+</div>
+
+</body>
+</html>
