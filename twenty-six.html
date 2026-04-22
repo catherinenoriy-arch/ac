@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Styling</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial;
+}
+
+/* 排版：三張圖橫排 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 左圖（圓角 + 不變形） */
+.img-left {
+    width: 33%;
+    height: 300px;
+    border-radius: 18px;
+    object-fit: cover; /* 不變形 */
+}
+
+/* 中間圓形 */
+.img-center {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* 圓形 */
+    border: 5px solid #ccc;
+    object-fit: cover;
+}
+
+/* 右圖（故意變形） */
+.img-right {
+    width: 33%;
+    height: 300px;
+    object-fit: fill; /* 會變形 */
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+    <!-- 左圖 -->
+    <img class="img-left" src="https://picsum.photos/500/400">
+
+    <!-- 中間 -->
+    <img class="img-center" src="https://picsum.photos/400/400">
+
+    <!-- 右圖 -->
+    <img class="img-right" src="https://picsum.photos/500/400">
+
+</div>
+
+</body>
+</html>
