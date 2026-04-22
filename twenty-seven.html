@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Layout</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #4fa3d1;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .container {
+        width: 320px;
+        background: #eee;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .header {
+        background: #a6ce39;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .box {
+        background: #14a9b5;
+        height: 60px;
+    }
+
+    .footer {
+        display: flex;
+        gap: 10px;
+    }
+
+    .footer div {
+        background: #ccc;
+        height: 50px;
+        flex: 1;
+    }
+
+    /* 🔁 當螢幕 >= 480px */
+    @media (min-width: 480px) {
+        .container {
+            width: 500px;
+        }
+
+        .content {
+            flex-direction: row;
+        }
+
+        .box {
+            flex: 1;
+            height: 100px;
+        }
+
+        .footer {
+            flex-direction: row;
+        }
+
+        .footer div {
+            height: 80px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="header"></div>
+
+    <div class="content">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="footer">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+</body>
+</html>
