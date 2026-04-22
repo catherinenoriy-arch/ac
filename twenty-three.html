@@ -1,48 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Button Demo</title>
+<meta charset="UTF-8">
+<title>Image Detail Viewer</title>
 
-    <!-- 引入 Roboto 字體 -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f5f5;
+}
 
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            padding: 50px;
-        }
+/* 上方 */
+.header {
+    height: 50px;
+    background: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #ccc;
+}
 
-        /* 按鈕樣式 */
-        .custom-btn {
-            height: 22px;
-            line-height: 22px; /* 讓文字垂直置中 */
-            padding: 0 10px;
+/* 按鈕 */
+.btn {
+    height: 22px;
+    padding: 0 10px;
+    font-size: 13px;
+    border-radius: 8px;
+    border: 1px solid #2f2f2f;
+    background: #fff;
+    cursor: pointer;
+}
 
-            font-size: 13px;
-            color: #2f2f2f;
+/* 主畫面 */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
 
-            background-color: #ffffff;
-            border: 1px solid #2f2f2f;
-            border-radius: 8px;
+/* 圖片 */
+.preview img {
+    width: 450px;
+    height: 240px;
+    object-fit: cover;
+}
 
-            cursor: pointer;
-        }
+/* 細節區（預設隱藏） */
+.detail {
+    width: 250px;
+    margin-left: 20px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    display: none;
+}
 
-        /* hover 效果（工程師通常會加） */
-        .custom-btn:hover {
-            background-color: #f5f5f5;
-        }
-
-        /* 點擊效果 */
-        .custom-btn:active {
-            background-color: #e0e0e0;
-        }
-    </style>
+.detail p {
+    font-size: 13px;
+    margin: 8px 0;
+}
+</style>
 </head>
+
 <body>
 
-    <button class="custom-btn">查看資訊</button>
+<!-- 上方按鈕 -->
+<div class="header">
+    <button class="btn" onclick="toggleDetail()">查看資訊</button>
+</div>
+
+<!-- 主內容 -->
+<div class="container">
+
+    <!-- 圖片 -->
+    <div class="preview">
+        <img id="image" src="https://picsum.photos/450/240">
+    </div>
+
+    <!-- 細節 -->
+    <div class="detail" id="detail">
+        <p><b>檔名：</b>sample.jpg</p>
+        <p><b>類型：</b>JPG</p>
+        <p><b>大小：</b>2.45MB</p>
+        <p><b>解析度：</b>450 x 240</p>
+        <p><b>建立日期：</b>2024/01/01</p>
+    </div>
+
+</div>
+
+<script>
+function toggleDetail() {
+    const detail = document.getElementById("detail");
+
+    if (detail.style.display === "none") {
+        detail.style.display = "block";
+    } else {
+        detail.style.display = "none";
+    }
+}
+</script>
 
 </body>
 </html>
