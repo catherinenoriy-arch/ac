@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 物件練習</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .box { background-color: #f0f0f0; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        h3 { color: #2c3e50; }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript 物件操作演示</h2>
+
+    <div class="box">
+        <h3>1. 原始物件的所有屬性：</h3>
+        <p id="propList"></p>
+    </div>
+
+    <div class="box">
+        <h3>2. 執行刪除 age 屬性動作...</h3>
+    </div>
+
+    <div class="box">
+        <h3>3. 刪除後的物件內容：</h3>
+        <pre id="finalObject"></pre>
+    </div>
+
+    <script>
+        // 題目提供的範例物件
+        var Person = {
+            firstName : "Tony",
+            lastName : "Lee",
+            age : 50,
+            eyeColor : "Blue"
+        };
+
+        // 任務 1：列出所有屬性
+        var keys = Object.keys(Person);
+        document.getElementById("propList").innerHTML = keys.join(", ");
+
+        // 任務 2：刪除 age 屬性
+        delete Person.age;
+
+        // 任務 3：列印刪除後的物件
+        // 使用 JSON.stringify(物件, 替換函數, 縮排空格) 讓格式變漂亮
+        document.getElementById("finalObject").textContent = JSON.stringify(Person, null, 4);
+    </script>
+
+</body>
+</html>
