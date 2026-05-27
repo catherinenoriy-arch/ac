@@ -44,5 +44,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    # 講義截圖中的執行方式
-    app.run(debug=True)
+    # 這是為了讓雲端平台順利執行的關鍵設定
+    app.run(debug=False, host="0.0.0.0", port=10000)
